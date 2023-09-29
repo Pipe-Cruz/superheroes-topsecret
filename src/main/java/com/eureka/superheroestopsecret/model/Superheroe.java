@@ -7,16 +7,15 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name= "superheroes")
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
-@ToString
+@AllArgsConstructor
 public class Superheroe {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String alias;
-    private Float estatura;
+    private Double estatura;
     @Column(name="esta_activo")
     private Boolean vigencia;
     @ManyToOne
