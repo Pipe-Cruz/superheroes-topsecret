@@ -8,19 +8,65 @@ Este es un proyecto de API REST creado para la primera semana del programa Eurek
 * Postman
 
 ## Configuración Inicial
-Clonar el repositorio localmente
+Clonar el repositorio localmente y compilar en el IDE
 ```
 git clone https://github.com/ManuDve/superheroes-topsecret.git
 ```
-Compilar el programa en el IDE y acceder a la consola de la BD H2 en la siguiente URL en un navegador:
+### Base de Datos
+Para visualizar la base de datos, acceder a la consola de la BD H2 en la siguiente URL en un navegador:
 ```
 http://localhost:8080/topsecret-console
 ```
 Acceder con las siguientes credenciales:
 ```
-Driver-Class: org.h2.Driver
-JDBC-URL: jdbc:h2:mem:topsecret-db
+Driver Class: org.h2.Driver
+JDBC URL: jdbc:h2:mem:topsecret-db
 user: sa
 password: 
 ```
-Se podrán visualizar las tablas de la base de datos creadas a partir de las entidades, están pueden ser modificadas mediante los siguientes endpoints:
+### Endpoints
+Utilizando Postman, se exponen los siguientes endpoints
+
+#### GET
+```
+http://localhost:8080/api/superheroes
+```
+```
+http://localhost:8080/api/organizaciones
+```
+
+Estos pueden aceptar parámetros por ID, por ejemplo:
+```
+http://localhost:8080/api/superheroes/1
+```
+#### POST
+
+```
+http://localhost:8080/api/superheroes
+```
+
+Debe ser realizado con la siguiente estructura JSON respectivamente:
+* Superheroes
+```json
+{
+    "alias": "Wolverine",
+    "estatura": "1.60",
+    "vigencia": "true"
+}
+```
+* Organizaciones
+```
+http://localhost:8080/api/organizaciones
+```
+```json
+{
+  "nombre": "X-men",
+  "vigencia": "true",
+  "superheroes": "1"
+}
+```
+#### DELETE
+Debe ser realizado utilizando el numero de ID, ejemplo:
+```
+http://localhost:8080/api/superheroes/1
+```

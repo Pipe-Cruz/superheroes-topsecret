@@ -18,6 +18,6 @@ public class Organizacion {
     private String nombre;
     @Column(name="esta_vigente")
     private Boolean vigencia;
-    @OneToMany(mappedBy = "organizacion")
+    @OneToMany(mappedBy = "organizacion", cascade = CascadeType.ALL)
     private List<Superheroe> superheroes;
 }
