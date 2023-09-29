@@ -61,8 +61,7 @@ http://localhost:8080/api/organizaciones
 ```json
 {
   "nombre": "X-men",
-  "vigencia": "true",
-  "superheroes": "1"
+  "vigencia": "true"
 }
 ```
 #### DELETE
