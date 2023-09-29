@@ -14,10 +14,10 @@ import java.util.List;
 public class Organizacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String nombre;
-    @Column(name="ES_VIGENTE")
-    private boolean vigencia;
+    @Column(name="esta_vigente")
+    private Boolean vigencia;
     @OneToMany(mappedBy = "organizacion")
     private List<Superheroe> superheroes;
 }

@@ -14,11 +14,11 @@ import java.time.LocalDateTime;
 public class Superheroe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String alias;
-    private float estatura;
-    @Column(name="ES_ACTIVO")
-    private boolean vigencia;
+    private Float estatura;
+    @Column(name="esta_activo")
+    private Boolean vigencia;
     @ManyToOne
     @JoinColumn(name = "organizacion_id")
     private Organizacion organizacion;
