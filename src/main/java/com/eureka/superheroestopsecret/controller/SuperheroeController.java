@@ -1,0 +1,29 @@
+package com.eureka.superheroestopsecret.controller;
+
+import com.eureka.superheroestopsecret.model.Superheroe;
+import com.eureka.superheroestopsecret.service.SuperheroeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+public class SuperheroeController {
+    @Autowired
+    private SuperheroeService superheroeService;
+    @PostMapping
+    public Superheroe createSuperheroe(@RequestBody Superheroe superheroe){
+        return superheroeService.createSuperheroe(superheroe);
+    }
+    @GetMapping
+    public List<Superheroe> getAllOrganizations(){
+        return superheroeService.getAllOrganitazions();
+    }
+    @GetMapping("{id}")
+    public Superheroe getOrganizationById(@PathVariable("id") Long id){
+        return superheroeService.getSuperheroeById(id);
+    }
+    @DeleteMapping("{id}")
+    public void deleteOrganizationById(@PathVariable("id") Long id){
+        superheroeService.deleteSuperheroe(id);
+    }
+}

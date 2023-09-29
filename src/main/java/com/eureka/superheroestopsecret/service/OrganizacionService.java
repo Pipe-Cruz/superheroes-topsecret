@@ -9,10 +9,10 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class OrganizationService {
+public class OrganizacionService {
     @Autowired
     private OrganizacionRepository organizacionRepository;
-    public Organizacion createSuperheroe(Organizacion organizacion){
+    public Organizacion createOrganizacion(Organizacion organizacion){
         return organizacionRepository.save(organizacion);
     }
     public Organizacion getOrganizacionById(Long id){
