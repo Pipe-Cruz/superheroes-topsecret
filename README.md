@@ -64,6 +64,26 @@ http://localhost:8080/api/organizaciones
   "vigencia": "true"
 }
 ```
+Tambien alternativamente este puede contener una lista de superheroes:
+```json
+{
+    "nombre": "X-men",
+    "vigencia": "true",
+    "superheroes": [
+        {
+            "alias": "Wolverine",
+            "estatura": "1.60",
+            "vigencia": "true"
+        },
+        {
+            "alias": "Cyclops",
+            "estatura": "1.91",
+            "vigencia": "false"
+        }
+    ]
+}
+```
+
 #### DELETE
 Debe ser realizado utilizando el numero de ID, ejemplo:
 ```
