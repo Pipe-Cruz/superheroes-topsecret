@@ -1,8 +1,6 @@
 package com.eureka.superheroestopsecret.model;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -12,14 +10,17 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString
 public class Superheroe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String alias;
     private float estatura;
-    private LocalDateTime nacimiento;
+    @Column(name="ES_ACTIVO")
+    private boolean vigencia;
     @ManyToOne
+    @JoinColumn(name = "organizacion_id")
     private Organizacion organizacion;
 
 }

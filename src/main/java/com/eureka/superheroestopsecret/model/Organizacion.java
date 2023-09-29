@@ -1,8 +1,6 @@
 package com.eureka.superheroestopsecret.model;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
@@ -12,13 +10,14 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-
+@ToString
 public class Organizacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nombre;
-    @OneToMany
+    @Column(name="ES_VIGENTE")
+    private boolean vigencia;
+    @OneToMany(mappedBy = "organizacion")
     private List<Superheroe> superheroes;
-
 }
