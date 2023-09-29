@@ -61,26 +61,28 @@ http://localhost:8080/api/organizaciones
 ```json
 {
   "nombre": "X-men",
-  "vigencia": "true"
+  "publico": "true",
+  "fecha": "1967-07-01"
 }
 ```
 Tambien alternativamente este puede contener una lista de superheroes:
 ```json
 {
-    "nombre": "X-men",
-    "vigencia": "true",
-    "superheroes": [
-        {
-            "alias": "Wolverine",
-            "estatura": "1.60",
-            "vigencia": "true"
-        },
-        {
-            "alias": "Cyclops",
-            "estatura": "1.91",
-            "vigencia": "false"
-        }
-    ]
+  "nombre": "X-men",
+  "publico": "true",
+  "fecha": "1967-07-01",
+  "superheroes": [
+    {
+      "alias": "Wolverine",
+      "estatura": "1.60",
+      "vigencia": "true"
+    },
+    {
+      "alias": "Jean Grey",
+      "estatura": "1.68",
+      "vigencia": "false"
+    }
+  ]
 }
 ```
 
