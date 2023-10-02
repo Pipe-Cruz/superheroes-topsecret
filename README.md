@@ -4,12 +4,17 @@ Este es un proyecto de API REST creado para la primera semana del programa Eurek
 
 ## Prerequisitos de instalación
 
-* IDE como IntelliJ o algún símil para Java
-* Postman
-* Instalar el plugin Longbok
+* Instalar un IDE como IntelliJ o algún símil para Java
+* Instalar Postman, crear una cuenta e iniciar sesión
+* Instalar el plugin Lombok en el IDE
+
 
 ## Configuración Inicial
-Clonar el repositorio localmente y compilar en el IDE
+
+* Clonar el repositorio localmente
+* Cargar las dependencias con Maven
+* Ejecutar la aplicación
+
 ```
 git clone https://github.com/ManuDve/superheroes-topsecret.git
 ```
