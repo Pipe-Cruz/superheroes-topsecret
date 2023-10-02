@@ -52,14 +52,6 @@ http://localhost:8080/api/superheroes
 ```
 
 Debe ser realizado con la siguiente estructura JSON respectivamente:
-* Superheroes
-```json
-{
-    "alias": "Wolverine",
-    "estatura": "1.60",
-    "vigencia": "true"
-}
-```
 * Organizaciones
 ```
 http://localhost:8080/api/organizaciones
@@ -71,7 +63,29 @@ http://localhost:8080/api/organizaciones
   "fecha": "1967-07-01"
 }
 ```
-Tambien alternativamente este puede contener una lista de superheroes:
+* Superheroes
+```json
+{
+    "alias": "Wolverine",
+    "estatura": "1.60",
+    "vigencia": "true"
+}
+```
+Luego de crear una organización, los superheroes permiten contener también la ID de la organización a la cual pertenecen como:
+```json
+{
+  "alias": "Jean Grey",
+  "estatura": "1.68",
+  "vigencia": "true",
+  "organizacion": {
+    "id": 1,
+    "nombre": "X-men",
+    "publico": "true",
+    "fecha": "1967-07-01"
+  }
+}
+```
+También alternativamente este puede contener una lista de superheroes (Este método aún no funciona generando la ID automática):
 ```json
 {
   "nombre": "X-men",
@@ -94,6 +108,9 @@ Tambien alternativamente este puede contener una lista de superheroes:
 
 #### DELETE
 Debe ser realizado utilizando el numero de ID, ejemplo:
+```
+http://localhost:8080/api/organizacion/1
+```
 ```
 http://localhost:8080/api/superheroes/1
 ```
