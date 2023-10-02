@@ -109,7 +109,7 @@ También alternativamente este puede contener una lista de superheroes (Este mé
 #### DELETE
 Debe ser realizado utilizando el numero de ID, ejemplo:
 ```
-http://localhost:8080/api/organizacion/1
+http://localhost:8080/api/organizaciones/1
 ```
 ```
 http://localhost:8080/api/superheroes/1
