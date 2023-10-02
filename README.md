@@ -6,6 +6,7 @@ Este es un proyecto de API REST creado para la primera semana del programa Eurek
 
 * IDE como IntelliJ o algún símil para Java
 * Postman
+* Instalar el plugin Longbok
 
 ## Configuración Inicial
 Clonar el repositorio localmente y compilar en el IDE
