@@ -5,6 +5,7 @@ Este es un proyecto de API REST creado para la primera semana del programa Eurek
 ## Prerequisitos de instalación
 
 * Instalar un IDE como IntelliJ o algún símil para Java
+* Instalar [JDK 11](https://jdk.java.net/java-se-ri/11-MR2)
 * Instalar Postman, crear una cuenta e iniciar sesión
 * Instalar el plugin Lombok en el IDE
 
