@@ -97,8 +97,9 @@ El parámetro con la ID de la organización es **obligatorio**.
 #### DELETE
 Debe ser realizado utilizando el número de **ID**, ejemplo:
 ```
-http://localhost:8080/api/organizaciones/1
-```
-```
 http://localhost:8080/api/superheroes/1
+```
+Para borrar una organización, primero deben eliminarse los superhéroes que están relacionados a aquella organización
+```
+http://localhost:8080/api/organizaciones/1
 ```
