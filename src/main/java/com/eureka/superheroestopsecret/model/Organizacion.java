@@ -3,6 +3,7 @@ package com.eureka.superheroestopsecret.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -11,7 +12,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Organizacion {
+public class Organizacion implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -20,10 +21,4 @@ public class Organizacion {
     private Boolean publico;
     @Column(name="primera_aparicion")
     private LocalDate fecha;
-    @OneToMany(
-            mappedBy = "organizacion",
-            cascade = CascadeType.ALL,
-            orphanRemoval = true
-    )
-    private List<Superheroe> superheroes;
 }

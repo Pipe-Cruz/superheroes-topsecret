@@ -32,7 +32,7 @@ user: sa
 password: 
 ```
 ### Endpoints
-Utilizando Postman, se exponen los siguientes endpoints
+Utilizando Postman, se exponen los siguientes endpoints:
 
 #### GET
 ```
@@ -42,73 +42,60 @@ http://localhost:8080/api/superheroes
 http://localhost:8080/api/organizaciones
 ```
 
-Estos pueden aceptar parámetros por ID, por ejemplo:
+Estos pueden aceptar parámetros por **ID**, por ejemplo:
+```
+http://localhost:8080/api/organizaciones/1
+```
 ```
 http://localhost:8080/api/superheroes/1
 ```
 #### POST
 
-```
-http://localhost:8080/api/superheroes
-```
+Debe ser realizado con la siguiente estructura **JSON**:
 
-Debe ser realizado con la siguiente estructura JSON respectivamente:
 * Organizaciones
 ```
 http://localhost:8080/api/organizaciones
 ```
 ```json
 {
-  "nombre": "X-men",
-  "publico": "true",
+  "nombre": "X-Men",
+  "publico": false,
   "fecha": "1967-07-01"
 }
 ```
-* Superheroes
 ```json
 {
-    "alias": "Wolverine",
-    "estatura": "1.60",
-    "vigencia": "true"
+"nombre": "Fantastic Four",
+"publico": true,
+"fecha": "1961-11-01"
 }
 ```
-Luego de crear una organización, los superheroes permiten contener también la ID de la organización a la cual pertenecen como:
+* Superhéroes
+
+Luego de crear una organización, los superhéroes llevan la ID de la organización a la cual pertenecen:
 ```json
 {
-  "alias": "Jean Grey",
-  "estatura": "1.68",
-  "vigencia": "true",
+  "alias": "Wolverine",
+  "vigencia": true,
   "organizacion": {
-    "id": 1,
-    "nombre": "X-men",
-    "publico": "true",
-    "fecha": "1967-07-01"
+    "id": 1
   }
 }
 ```
-También alternativamente este puede contener una lista de superheroes (Este método aún no funciona generando la ID automática):
 ```json
 {
-  "nombre": "X-men",
-  "publico": "true",
-  "fecha": "1967-07-01",
-  "superheroes": [
-    {
-      "alias": "Wolverine",
-      "estatura": "1.60",
-      "vigencia": "true"
-    },
-    {
-      "alias": "Jean Grey",
-      "estatura": "1.68",
-      "vigencia": "false"
-    }
-  ]
+  "alias": "Mister Fantastic",
+  "vigencia": false,
+  "organizacion": {
+    "id": 2
+  }
 }
 ```
+El parámetro con la ID de la organización es **obligatorio**.
 
 #### DELETE
-Debe ser realizado utilizando el numero de ID, ejemplo:
+Debe ser realizado utilizando el número de **ID**, ejemplo:
 ```
 http://localhost:8080/api/organizaciones/1
 ```

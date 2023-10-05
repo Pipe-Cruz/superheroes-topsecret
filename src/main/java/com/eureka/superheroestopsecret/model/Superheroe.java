@@ -3,23 +3,21 @@ package com.eureka.superheroestopsecret.model;
 import lombok.*;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
-
+import java.io.Serializable;
 @Entity
 @Table(name= "superheroes")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Superheroe {
+public class Superheroe implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String alias;
-    private Double estatura;
     @Column(name="esta_activo")
     private Boolean vigencia;
     @ManyToOne
-    @JoinColumn(name = "organizacion_id")
+    @JoinColumn(name = "organizacion_id", nullable = false)
     private Organizacion organizacion;
 
 }
