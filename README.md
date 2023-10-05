@@ -73,6 +73,10 @@ http://localhost:8080/api/organizaciones
 ```
 * Superhéroes
 
+```
+http://localhost:8080/api/superheroes
+```
+
 Luego de crear una organización, los superhéroes llevan la ID de la organización a la cual pertenecen:
 ```json
 {
