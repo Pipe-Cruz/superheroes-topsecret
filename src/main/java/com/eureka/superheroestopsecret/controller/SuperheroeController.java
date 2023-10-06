@@ -21,15 +21,15 @@ public class SuperheroeController {
         return superheroeService.createSuperheroe(superheroe);
     }
     @GetMapping
-    public List<Superheroe> getAllOrganizations(){
-        return superheroeService.getAllOrganitazions();
+    public List<Superheroe> getAllSuperheroes(){
+        return superheroeService.getAllSuperheroes();
     }
     @GetMapping("{id}")
-    public Superheroe getOrganizationById(@PathVariable("id") Long id){
+    public Superheroe getSuperheroeById(@PathVariable("id") Long id){
         return superheroeService.getSuperheroeById(id);
     }
     @DeleteMapping("{id}")
-    public void deleteOrganizationById(@PathVariable("id") Long id){
+    public void deleteSuperheroeById(@PathVariable("id") Long id){
         superheroeService.deleteSuperheroe(id);
     }
 }
