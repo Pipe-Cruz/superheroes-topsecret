@@ -22,7 +22,7 @@ git clone https://github.com/ManuDve/superheroes-topsecret.git
 ### Base de Datos
 Para visualizar la base de datos, acceder a la consola de la BD H2 en la siguiente URL en un navegador:
 ```
-http://localhost:8080/topsecret-console
+http://localhost:8081/topsecret-console
 ```
 Acceder con las siguientes credenciales:
 ```
@@ -36,18 +36,18 @@ Utilizando Postman, se exponen los siguientes endpoints:
 
 #### GET
 ```
-http://localhost:8080/api/superheroes
+http://localhost:8081/api/superheroes
 ```
 ```
-http://localhost:8080/api/organizaciones
+http://localhost:8081/api/organizaciones
 ```
 
 Estos pueden aceptar parámetros por **ID**, por ejemplo:
 ```
-http://localhost:8080/api/organizaciones/1
+http://localhost:8081/api/organizaciones/1
 ```
 ```
-http://localhost:8080/api/superheroes/1
+http://localhost:8081/api/superheroes/1
 ```
 #### POST
 
@@ -55,7 +55,7 @@ Debe ser realizado con la siguiente estructura **JSON**:
 
 * Organizaciones
 ```
-http://localhost:8080/api/organizaciones
+http://localhost:8081/api/organizaciones
 ```
 ```json
 {
@@ -74,7 +74,7 @@ http://localhost:8080/api/organizaciones
 * Superhéroes
 
 ```
-http://localhost:8080/api/superheroes
+http://localhost:8081/api/superheroes
 ```
 
 Luego de crear una organización, los superhéroes llevan la ID de la organización a la cual pertenecen:
@@ -101,9 +101,9 @@ El parámetro con la ID de la organización es **obligatorio**.
 #### DELETE
 Debe ser realizado utilizando el número de **ID**, ejemplo:
 ```
-http://localhost:8080/api/superheroes/1
+http://localhost:8081/api/superheroes/1
 ```
 Para borrar una organización, primero deben eliminarse los superhéroes que están relacionados a aquella organización
 ```
-http://localhost:8080/api/organizaciones/1
+http://localhost:8081/api/organizaciones/1
 ```
